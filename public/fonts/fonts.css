@@ -1,0 +1,71 @@
+/* Cairo Font - Regular (400) */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./Cairo-Regular.ttf') format('truetype');
+}
+
+/* Cairo Font - Medium (500) */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./Cairo-Medium.ttf') format('truetype');
+}
+
+/* Cairo Font - SemiBold (600) */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./Cairo-SemiBold.ttf') format('truetype');
+}
+
+/* Cairo Font - Bold (700) */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./Cairo-Bold.ttf') format('truetype');
+}
+
+/* Crimson Pro Font - Regular (400) */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./CrimsonPro-Regular.ttf') format('truetype');
+}
+
+/* Crimson Pro Font - Medium (500) */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./CrimsonPro-Medium.ttf') format('truetype');
+}
+
+/* Crimson Pro Font - SemiBold (600) */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./CrimsonPro-SemiBold.ttf') format('truetype');
+}
+
+/* Crimson Pro Font - Bold (700) */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./CrimsonPro-Bold.ttf') format('truetype');
+}

@@ -14,43 +14,54 @@ const Home = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900 text-white overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0" style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                    }} />
+            <section className="relative bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900 text-white overflow-hidden min-h-screen flex items-center">
+                {/* Enhanced Background Pattern */}
+                <div className="absolute inset-0">
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-700/90 via-primary-800/80 to-primary-900/90"></div>
+                    
+                    {/* Animated Circles */}
+                    <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    
+                    {/* Subtle Grid Pattern */}
+                    <div className="absolute inset-0 opacity-5" style={{
+                        backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                        backgroundSize: '50px 50px'
+                    }}></div>
                 </div>
 
-                <div className="container-custom py-20 md:py-32 relative">
+                <div className="container-custom py-12 md:py-16 relative w-full">
                     <div className="text-center max-w-4xl mx-auto">
-                        <p className="text-accent-300 font-medium mb-2">{t.home.university}</p>
-                        <p className="text-white/80 text-sm mb-6">{t.home.department}</p>
+                        <p className="text-accent-300 font-medium text-base md:text-lg mb-1">{t.home.university}</p>
+                        <p className="text-white/80 text-base md:text-lg mb-4">{t.home.department}</p>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
                             {t.home.conferenceTitle}
                         </h1>
 
-                        <div className="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                        <div className="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
                             <span className="text-2xl md:text-3xl font-bold text-accent-300">{t.home.conferenceAcronym}</span>
                         </div>
 
-                        <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
+                        <p className="text-xl md:text-2xl text-white/90 mb-6 font-light">
                             {t.home.theme}
                         </p>
 
-                        <div className="flex flex-wrap justify-center gap-4 mb-10">
+                        <div className="flex flex-wrap justify-center gap-4 mb-6">
                             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
-                                <span>{t.home.dates}</span>
+                                <span className="text-base md:text-lg">{t.home.dates}</span>
                             </div>
                             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                <span>{t.home.location}</span>
+                                <span className="text-base md:text-lg">{t.home.location}</span>
                             </div>
                         </div>
 
@@ -71,7 +82,7 @@ const Home = () => {
                 <div className="container-custom">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="heading-secondary mb-6">{t.home.welcomeTitle}</h2>
-                        <p className="text-gray-600 leading-relaxed text-lg">
+                        <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
                             {t.home.welcomeText}
                         </p>
                         <Link to="/about" className="btn-primary mt-8 inline-flex">

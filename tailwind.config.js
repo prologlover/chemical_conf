@@ -33,8 +33,19 @@ export default {
                 }
             },
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-                arabic: ['Noto Sans Arabic', 'system-ui', 'sans-serif'],
+                sans: ['Crimson Pro', 'Georgia', 'serif'],
+                serif: ['Crimson Pro', 'Georgia', 'serif'],
+                arabic: ['Cairo', 'system-ui', 'sans-serif'],
+            },
+            fontSize: {
+                'base': ['1.125rem', { lineHeight: '1.75' }], // 18px instead of 16px
+                'lg': ['1.25rem', { lineHeight: '1.75' }], // 20px
+                'xl': ['1.5rem', { lineHeight: '1.75' }], // 24px
+                '2xl': ['1.875rem', { lineHeight: '1.5' }], // 30px
+                '3xl': ['2.25rem', { lineHeight: '1.4' }], // 36px
+                '4xl': ['2.5rem', { lineHeight: '1.3' }], // 40px
+                '5xl': ['3rem', { lineHeight: '1.2' }], // 48px
+                '6xl': ['3.75rem', { lineHeight: '1.1' }], // 60px
             },
         },
     },
