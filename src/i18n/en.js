@@ -20,7 +20,7 @@ export const en = {
     // Home Page
     home: {
         university: 'University of Technology - Iraq',
-        department: 'Petroleum Engineering Department',
+        department: 'College of Chemical Engineering',
         conferenceTitle: 'The Fourth International Conference on Modern Technologies in Oil and Gas Industries',
         conferenceAcronym: 'ICMTOGI 2026',
         theme: 'Innovation and Sustainability in Oil & Gas Sector',
@@ -42,7 +42,7 @@ export const en = {
     // About Page
     about: {
         title: 'About the Conference',
-        description: 'The Fourth International Conference on Modern Technologies in Oil and Gas Industries (ICMTOGI 2026) is organized by the Petroleum Engineering Department at the University of Technology, Iraq. This prestigious conference aims to provide a platform for researchers, academics, scientists, and industry professionals to share their latest research findings and innovations in the oil and gas sector.',
+        description: 'The Fourth International Conference on Modern Technologies in Oil and Gas Industries (ICMTOGI 2026) is organized by the College of Chemical Engineering at the University of Technology, Iraq. This prestigious conference aims to provide a platform for researchers, academics, scientists, and industry professionals to share their latest research findings and innovations in the oil and gas sector.',
         objectives: 'Conference Objectives',
         objective1: 'Promote the exchange of knowledge and ideas among researchers and practitioners in oil and gas industries',
         objective2: 'Showcase the latest advancements in modern petroleum technologies',
@@ -75,13 +75,13 @@ export const en = {
         honoraryChairTitle: 'President, University of Technology',
         // Organizing Committee
         orgChair: 'Prof. Dr. Fatima Al-Hussaini',
-        orgChairTitle: 'Head of Petroleum Engineering Department',
+        orgChairTitle: 'Dean of College of Chemical Engineering',
         orgCoChair: 'Dr. Mohammed Al-Saadi',
-        orgCoChairTitle: 'Associate Professor, Petroleum Engineering',
+        orgCoChairTitle: 'Associate Professor, Chemical Engineering',
         orgMember1: 'Dr. Sara Al-Mousa',
-        orgMember1Title: 'Assistant Professor, Petroleum Engineering',
+        orgMember1Title: 'Assistant Professor, Chemical Engineering',
         orgMember2: 'Dr. Ali Al-Hakim',
-        orgMember2Title: 'Lecturer, Petroleum Engineering',
+        orgMember2Title: 'Lecturer, Chemical Engineering',
         orgMember3: 'Eng. Noor Al-Jabouri',
         orgMember3Title: 'Research Assistant',
         // Scientific Committee
@@ -232,7 +232,7 @@ export const en = {
         title: 'Contact Us',
         subtitle: 'Get in touch with the conference organizers',
         address: 'Address',
-        addressText: 'Petroleum Engineering Department\nUniversity of Technology\nAl-Sina\'a Street, Baghdad, Iraq',
+        addressText: 'College of Chemical Engineering\nUniversity of Technology\nAl-Sina\'a Street, Baghdad, Iraq',
         phone: 'Phone',
         phoneNumber: '+964 (0) 7XX XXX XXXX',
         email: 'Email',
@@ -256,7 +256,7 @@ export const en = {
         contact: 'Contact Info',
         followUs: 'Follow Us',
         copyright: '© 2026 ICMTOGI - The Fourth International Conference on Modern Technologies in Oil and Gas Industries. All rights reserved.',
-        organizedBy: 'Organized by the Petroleum Engineering Department, University of Technology - Iraq',
+        organizedBy: 'Organized by the College of Chemical Engineering, University of Technology - Iraq',
         designedBy: 'Website designed by University of Technology - Information Technology Center',
     },
 };

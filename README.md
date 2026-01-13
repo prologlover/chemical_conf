@@ -2,7 +2,7 @@
 
 ![Conference Logo](./logo.jpg)
 
-A professional, bilingual (Arabic/English) academic conference website for **The Fourth International Conference on Modern Technologies in Oil and Gas Industries (ICMTOGI 2026)**, organized by the Petroleum Engineering Department at the University of Technology, Iraq.
+A professional, bilingual (Arabic/English) academic conference website for **The Fourth International Conference on Modern Technologies in Oil and Gas Industries (ICMTOGI 2026)**, organized by the College of Chemical Engineering at the University of Technology, Iraq.
 
 ## 🌟 Features
 
@@ -161,7 +161,7 @@ The built files in the `dist` directory can be deployed to any static hosting se
 - **Date**: March 15-17, 2026
 - **Location**: University of Technology, Baghdad, Iraq
 - **Theme**: Innovation and Sustainability in Oil & Gas Sector
-- **Organizer**: Petroleum Engineering Department, University of Technology - Iraq
+- **Organizer**: College of Chemical Engineering, University of Technology - Iraq
 
 
 
@@ -170,7 +170,7 @@ The built files in the `dist` directory can be deployed to any static hosting se
 This project is private and proprietary to the University of Technology - Iraq.
 
 
-**Organized by**: Petroleum Engineering Department, University of Technology - Iraq
+**Organized by**: College of Chemical Engineering, University of Technology - Iraq
 
 **Website Created**: January 2026
 
