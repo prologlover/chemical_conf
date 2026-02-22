@@ -8,6 +8,7 @@ import ImportantDates from './pages/ImportantDates';
 import Program from './pages/Program';
 import Speakers from './pages/Speakers';
 import Registration from './pages/Registration';
+import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/program" element={<Program />} />
                 <Route path="/speakers" element={<Speakers />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/partners" element={<Partners />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
         </Layout>

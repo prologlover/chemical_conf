@@ -16,38 +16,56 @@ const Navbar = () => {
         { path: '/program', label: t.nav.program },
         { path: '/speakers', label: t.nav.speakers },
         { path: '/registration', label: t.nav.registration },
+        { path: '/partners', label: t.nav.partners },
         { path: '/contact', label: t.nav.contact },
     ];
 
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className="bg-primary-700 shadow-lg sticky top-0 z-50">
+        <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
             <div className="container-custom">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3">
                         <img
+                            src="/uni_logo.png"
+                            alt="University Logo"
+                            className="h-12 w-auto object-contain"
+                        />
+                        <img
                             src="/logo.jpg"
                             alt="Department Logo"
                             className="h-12 w-auto rounded-md object-contain"
                         />
-                        <span className="text-white font-semibold text-sm hidden sm:block">ICMTOGI 2026</span>
+                        <span className="text-primary-700 font-semibold text-sm hidden sm:block">ICMTOGI 2026</span>
                     </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center gap-1">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.path}
-                                to={link.path}
-                                className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.path)
-                                    ? 'bg-white/20 text-white'
-                                    : 'text-white/80 hover:text-white hover:bg-white/10'
-                                    }`}
-                            >
-                                {link.label}
-                            </Link>
+                            link.isExternal ? (
+                                <a
+                                    key={link.label}
+                                    href={link.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-primary-700 hover:bg-primary-50"
+                                >
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.path}
+                                    to={link.path}
+                                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.path)
+                                        ? 'bg-primary-700 text-white'
+                                        : 'text-gray-700 hover:text-primary-700 hover:bg-primary-50'
+                                        }`}
+                                >
+                                    {link.label}
+                                </Link>
+                            )
                         ))}
                     </div>
 
@@ -55,7 +73,7 @@ const Navbar = () => {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={toggleLanguage}
-                            className="px-3 py-1.5 text-sm font-medium bg-white text-primary-700 rounded-md hover:bg-gray-100 transition-colors"
+                            className="px-3 py-1.5 text-sm font-medium bg-primary-700 text-white rounded-md hover:bg-primary-800 transition-colors"
                         >
                             {language === 'en' ? 'العربية' : 'EN'}
                         </button>
@@ -63,7 +81,7 @@ const Navbar = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-md"
+                            className="lg:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-md"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 {isOpen ? (
@@ -81,17 +99,30 @@ const Navbar = () => {
                     <div className="lg:hidden pb-4">
                         <div className="flex flex-col gap-1">
                             {navLinks.map((link) => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.path)
-                                        ? 'bg-white/20 text-white'
-                                        : 'text-white/80 hover:text-white hover:bg-white/10'
-                                        }`}
-                                >
-                                    {link.label}
-                                </Link>
+                                link.isExternal ? (
+                                    <a
+                                        key={link.label}
+                                        href={link.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setIsOpen(false)}
+                                        className="px-4 py-2 text-sm font-medium rounded-md transition-colors text-gray-700 hover:text-primary-700 hover:bg-primary-50"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        key={link.path}
+                                        to={link.path}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link.path)
+                                            ? 'bg-primary-700 text-white'
+                                            : 'text-gray-700 hover:text-primary-700 hover:bg-primary-50'
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )
                             ))}
                         </div>
                     </div>

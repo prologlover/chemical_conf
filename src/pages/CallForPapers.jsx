@@ -20,7 +20,7 @@ const CallForPapers = () => {
         t.callForPapers.guideline3,
         t.callForPapers.guideline4,
         t.callForPapers.guideline5,
-    ];
+    ].filter(guideline => guideline && guideline.trim() !== '');
 
     return (
         <div>
@@ -112,7 +112,7 @@ const CallForPapers = () => {
                                 <h3 className="text-xl font-semibold mb-4">{t.callForPapers.submissionPortal}</h3>
                                 <p className="text-white/80 text-sm mb-6">{t.callForPapers.submissionInfo}</p>
                                 <a
-                                    href="#"
+                                    href="mailto:icmtogi@uotechnology.edu.iq"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-700 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                                 >
                                     {t.callForPapers.submitOnline}

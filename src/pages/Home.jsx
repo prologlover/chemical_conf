@@ -2,7 +2,12 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Home = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+    const brochurePath = language === 'ar' ? '/brochures/brochure_ar.pdf' : '/brochures/brochure_en.pdf';
+    const brochureName = language === 'ar' ? 'ICMTOGI_Brochure_AR.pdf' : 'ICMTOGI_Brochure_EN.pdf';
+    const brochureImages = language === 'ar'
+        ? ['/brochures/images/ar_1.jpg', '/brochures/images/ar_2.jpg']
+        : ['/brochures/images/en_1.jpg', '/brochures/images/en_2.jpg'];
 
     const keyDates = [
         { label: t.home.abstractDeadline, date: t.importantDates.date2 },
@@ -19,11 +24,11 @@ const Home = () => {
                 <div className="absolute inset-0">
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-700/90 via-primary-800/80 to-primary-900/90"></div>
-                    
+
                     {/* Animated Circles */}
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-pulse"></div>
                     <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-                    
+
                     {/* Subtle Grid Pattern */}
                     <div className="absolute inset-0 opacity-5" style={{
                         backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
@@ -92,6 +97,49 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Conference Brochure Section */}
+            <section className="section-padding bg-gray-50">
+                <div className="container-custom">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="heading-secondary text-center mb-8">{t.home.brochureTitle}</h2>
+                        <div className="card overflow-hidden p-4">
+                            <div className="flex flex-col gap-4">
+                                {brochureImages.map((imgSrc, index) => (
+                                    <div key={index} className="relative group">
+                                        <img
+                                            src={imgSrc}
+                                            alt={`${t.home.brochureTitle} - Page ${index + 1}`}
+                                            className="w-full h-auto object-contain rounded-lg shadow-lg transition-transform group-hover:scale-[1.01]"
+                                            onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                const fallback = document.createElement('div');
+                                                fallback.className = 'w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center';
+                                                fallback.innerHTML = `<p class="text-gray-500">Brochure Page ${index + 1}</p>`;
+                                                e.target.parentNode.appendChild(fallback);
+                                            }}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-6 text-center">
+                                <a
+                                    href={brochurePath}
+                                    download={brochureName}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-primary inline-flex items-center gap-2"
+                                >
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                    {t.home.downloadBrochure}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Key Dates Section */}
             <section className="section-padding bg-gray-50">
                 <div className="container-custom">
@@ -113,6 +161,38 @@ const Home = () => {
                         <Link to="/important-dates" className="btn-secondary">
                             {t.home.learnMore}
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+
+
+            {/* Partners Section */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <h2 className="heading-secondary text-center mb-12">{t.partners.title}</h2>
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+                        <div className="text-center group">
+                            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
+                                <img
+                                    src="/partners/alqalam.jpg"
+                                    alt={t.partners.alqalam}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-800">{t.partners.alqalam}</h3>
+                        </div>
+
+                        <div className="text-center group">
+                            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
+                                <img
+                                    src="/partners/knowledge.png"
+                                    alt={t.partners.knowledge}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-800">{t.partners.knowledge}</h3>
+                        </div>
                     </div>
                 </div>
             </section>
