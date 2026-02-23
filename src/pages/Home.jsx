@@ -193,6 +193,17 @@ const Home = () => {
                             </div>
                             <h3 className="text-xl font-semibold text-gray-800">{t.partners.knowledge}</h3>
                         </div>
+
+                        <div className="text-center group">
+                            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
+                                <img
+                                    src="/partners/mustaqbal.jpg"
+                                    alt={t.partners.mustaqbal}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-800">{t.partners.mustaqbal}</h3>
+                        </div>
                     </div>
                 </div>
             </section>

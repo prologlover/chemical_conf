@@ -96,6 +96,10 @@ export const ar = {
         supMember9Title: 'مساعد رئيس جامعة نولوج',
         supMember10: 'أ.م.د. ايدن صديق',
         supMember10Title: 'مساعد رئيس جامعة القلم للشؤون العلمية',
+        supMember11: 'أ.م.د. علي شاكر مجدي',
+        supMember11Title: 'عميد كلية الهندسة - جامعة المستقبل',
+        supMember12: 'أ.م.د. أزهر محسن عبد',
+        supMember12Title: 'عميد كلية التقنيات الهندسية - جامعة المستقبل',
         // Honorary Committee
         honoraryChair: 'أ.د. محسن نوري حمزة',
         honoraryChairTitle: 'رئيس الجامعة التكنولوجية',
@@ -288,6 +292,7 @@ export const ar = {
         title: 'شركاؤنا',
         knowledge: 'جامعة نولوج',
         alqalam: 'جامعة القلم',
+        mustaqbal: 'جامعة المستقبل',
     },
 
     // Footer

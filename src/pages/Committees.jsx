@@ -54,6 +54,16 @@ const Committees = () => {
             title: t.committees.supMember10Title,
             image: '/supervisory/placeholder.jpg', // Placeholder for photo
         },
+        {
+            name: t.committees.supMember11,
+            title: t.committees.supMember11Title,
+            image: '/supervisory/placeholder.jpg', // Placeholder for photo
+        },
+        {
+            name: t.committees.supMember12,
+            title: t.committees.supMember12Title,
+            image: '/supervisory/placeholder.jpg', // Placeholder for photo
+        },
     ];
 
     // Hidden committees - uncomment if needed

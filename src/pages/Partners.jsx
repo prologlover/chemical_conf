@@ -37,6 +37,17 @@ const Partners = () => {
                             </div>
                             <h3 className="text-2xl font-semibold text-gray-800">{t.partners.knowledge}</h3>
                         </div>
+
+                        <div className="text-center group">
+                            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto mb-6 flex items-center justify-center p-6 border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group-hover:-translate-y-1">
+                                <img
+                                    src="/partners/mustaqbal.jpg"
+                                    alt={t.partners.mustaqbal}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-2xl font-semibold text-gray-800">{t.partners.mustaqbal}</h3>
+                        </div>
                     </div>
                 </div>
             </section>

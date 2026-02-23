@@ -1,7 +1,13 @@
 import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
+
+    const brochurePath = language === 'ar' ? '/brochures/brochure_ar.pdf' : '/brochures/brochure_en.pdf';
+    const brochureName = language === 'ar' ? 'ICMTOGI_Brochure_AR.pdf' : 'ICMTOGI_Brochure_EN.pdf';
+    const brochureImages = language === 'ar'
+        ? ['/brochures/images/ar_1.jpg', '/brochures/images/ar_2.jpg']
+        : ['/brochures/images/en_1.jpg', '/brochures/images/en_2.jpg'];
 
     const objectives = [
         t.about.objective1,
@@ -78,43 +84,36 @@ const About = () => {
             </section>
 
             {/* Conference Brochure Section */}
-            <section className="section-padding bg-white">
+            <section className="section-padding bg-gray-50">
                 <div className="container-custom">
                     <div className="max-w-5xl mx-auto">
                         <h2 className="heading-secondary text-center mb-8">{t.home.brochureTitle}</h2>
                         <div className="card overflow-hidden p-4">
-                            <div className="relative group">
-                                <img 
-                                    src="/conference-brochure.jpg" 
-                                    alt={t.home.brochureTitle}
-                                    className="w-full h-auto object-contain rounded-lg shadow-lg transition-transform group-hover:scale-[1.02]"
-                                    onError={(e) => {
-                                        e.target.style.display = 'none';
-                                        const fallback = document.createElement('div');
-                                        fallback.className = 'w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center';
-                                        fallback.innerHTML = '<p class="text-gray-500">Conference Brochure Image</p>';
-                                        e.target.parentNode.appendChild(fallback);
-                                    }}
-                                />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
-                                    <a 
-                                        href="/conference-brochure.jpg" 
-                                        download="conference-brochure.jpg"
-                                        className="btn-primary bg-white text-primary-700 hover:bg-gray-100 pointer-events-auto"
-                                        onClick={(e) => e.stopPropagation()}
-                                    >
-                                        <svg className="w-5 h-5 inline-block me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                        </svg>
-                                        {t.home.downloadBrochure}
-                                    </a>
-                                </div>
+                            <div className="flex flex-col gap-4">
+                                {brochureImages.map((imgSrc, index) => (
+                                    <div key={index} className="relative group">
+                                        <img
+                                            src={imgSrc}
+                                            alt={`${t.home.brochureTitle} - Page ${index + 1}`}
+                                            className="w-full h-auto object-contain rounded-lg shadow-lg transition-transform group-hover:scale-[1.01]"
+                                            onError={(e) => {
+                                                e.target.style.display = 'none';
+                                                const fallback = document.createElement('div');
+                                                fallback.className = 'w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center';
+                                                fallback.innerHTML = `<p class="text-gray-500">Brochure Page ${index + 1}</p>`;
+                                                e.target.parentNode.appendChild(fallback);
+                                            }}
+                                        />
+                                    </div>
+                                ))}
                             </div>
-                            <div className="mt-4 text-center">
-                                <a 
-                                    href="/conference-brochure.jpg" 
-                                    download="conference-brochure.jpg"
-                                    className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-medium transition-colors"
+                            <div className="mt-6 text-center">
+                                <a
+                                    href={brochurePath}
+                                    download={brochureName}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-primary inline-flex items-center gap-2"
                                 >
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

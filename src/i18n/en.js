@@ -96,6 +96,10 @@ export const en = {
         supMember9Title: 'Vice President of Knowledge University',
         supMember10: 'Asst. Prof. Dr. Ayden Siddiq',
         supMember10Title: 'Vice President of Al-Qalam University for Scientific Affairs',
+        supMember11: 'Asst. Prof. Dr. Ali Shaker Majdi',
+        supMember11Title: 'Dean of College of Engineering - Al-Mustaqbal University',
+        supMember12: 'Asst. Prof. Dr. Azhar Mohsen Abd',
+        supMember12Title: 'Dean of College of Engineering Technologies - Al-Mustaqbal University',
         // Honorary Committee
         honoraryChair: 'Prof. Dr. Muhsin Noori Hamzeh',
         honoraryChairTitle: 'President, University of Technology',
@@ -288,6 +292,7 @@ export const en = {
         title: 'Our Partners',
         knowledge: 'Knowledge University',
         alqalam: 'Al-Qalam University',
+        mustaqbal: 'Al-Mustaqbal University',
     },
 
     // Footer
