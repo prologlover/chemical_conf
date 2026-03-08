@@ -10,10 +10,13 @@ import Speakers from './pages/Speakers';
 import Registration from './pages/Registration';
 import Partners from './pages/Partners';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
         <Layout>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -25,6 +28,7 @@ function App() {
                 <Route path="/registration" element={<Registration />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/team" element={<Team />} />
             </Routes>
         </Layout>
     );

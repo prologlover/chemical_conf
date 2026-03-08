@@ -40,7 +40,7 @@ const About = () => {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
-                        <p className="text-gray-600 leading-relaxed text-lg">
+                        <p className="text-gray-700 leading-loose text-3xl md:text-4xl font-medium text-justify md:text-center">
                             {t.about.description}
                         </p>
                     </div>
@@ -54,10 +54,10 @@ const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                         {objectives.map((objective, index) => (
                             <div key={index} className="card flex items-start gap-4">
-                                <div className="w-10 h-10 bg-primary-700 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span className="text-white font-bold">{index + 1}</span>
+                                <div className="w-12 h-12 bg-primary-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <span className="text-white font-bold text-lg">{index + 1}</span>
                                 </div>
-                                <p className="text-gray-600">{objective}</p>
+                                <p className="text-gray-700 text-xl md:text-2xl font-medium leading-relaxed">{objective}</p>
                             </div>
                         ))}
                     </div>
@@ -126,13 +126,14 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Venue */}
+            {/* Venue (Hidden per request) */}
+            {/* 
             <section className="section-padding bg-gray-50">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="heading-secondary text-center mb-8">{t.about.venue}</h2>
                         <div className="card">
-                            <div className="flex flex-col md:flex-row gap-6">
+                            <div className="flex flex-col gap-6">
                                 <div className="flex-1">
                                     <p className="text-gray-600 leading-relaxed">
                                         {t.about.venueDescription}
@@ -145,19 +146,24 @@ const About = () => {
                                         <span className="font-medium">{t.home.location}</span>
                                     </div>
                                 </div>
-                                <div className="w-full md:w-64 h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                                    <div className="text-center text-gray-500">
-                                        <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                        </svg>
-                                        <p className="text-sm">University of Technology</p>
-                                    </div>
+                                <div className="w-full rounded-xl overflow-hidden shadow-md">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.344038588332!2d44.44562727441146!3d33.309820056569414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15578162869efe83%3A0x892e02877e75b47!2sUniversity%20of%20Technology!5e0!3m2!1sen!2siq!4v1682846251288!5m2!1sen!2siq"
+                                        width="100%"
+                                        height="350"
+                                        style={{ border: 0 }}
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="University of Technology - Baghdad, Iraq"
+                                    ></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            */}
         </div>
     );
 };

@@ -6,13 +6,12 @@ const ImportantDates = () => {
     const dates = [
         { label: t.importantDates.abstractSubmission, date: t.importantDates.date1, icon: 'start' },
         { label: t.importantDates.abstractDeadline, date: t.importantDates.date2, icon: 'deadline' },
-        { label: t.importantDates.fullPaperDeadline, date: t.importantDates.date3, icon: 'deadline' },
-        { label: t.importantDates.notification, date: t.importantDates.date4, icon: 'notification' },
-        { label: t.importantDates.cameraReady, date: t.importantDates.date5, icon: 'deadline' },
-        { label: t.importantDates.earlyRegistration, date: t.importantDates.date6, icon: 'registration' },
-        { label: t.importantDates.lateRegistration, date: t.importantDates.date7, icon: 'registration' },
-        { label: t.importantDates.conferenceStart, date: t.importantDates.date8, icon: 'conference' },
-        { label: t.importantDates.conferenceEnd, date: t.importantDates.date9, icon: 'conference' },
+        { label: t.importantDates.notification, date: t.importantDates.date3, icon: 'notification' },
+        { label: t.importantDates.cameraReady, date: t.importantDates.date4, icon: 'deadline' },
+        { label: t.importantDates.earlyRegistration, date: t.importantDates.date5, icon: 'registration' },
+        { label: t.importantDates.lateRegistration, date: t.importantDates.date6, icon: 'registration' },
+        { label: t.importantDates.conferenceStart, date: t.importantDates.date7, icon: 'conference' },
+        { label: t.importantDates.conferenceEnd, date: t.importantDates.date8, icon: 'conference' },
     ];
 
     const getIcon = (type) => {
@@ -96,17 +95,17 @@ const ImportantDates = () => {
             </section>
 
             {/* CTA */}
-            <section className="section-padding bg-gray-50">
+            {/* <section className="section-padding bg-gray-50">
                 <div className="container-custom text-center">
                     <div className="max-w-2xl mx-auto">
                         <h2 className="heading-secondary mb-6">{t.home.registerNow}</h2>
                         <div className="flex flex-wrap justify-center gap-4">
                             <a href="#" className="btn-primary">{t.callForPapers.submitOnline}</a>
-                            <a href="/registration" className="btn-secondary">{t.home.registerNow}</a>
+                            {/* <a href="/registration" className="btn-secondary">{t.home.registerNow}</a> * /}
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };

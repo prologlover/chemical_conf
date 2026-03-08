@@ -9,7 +9,7 @@ export const en = {
         home: 'Home',
         about: 'About',
         committees: 'Committees',
-        callForPapers: 'Call for Papers',
+        callForPapers: 'Submission Guidelines',
         importantDates: 'Important Dates',
         program: 'Program',
         speakers: 'Keynote Speakers',
@@ -26,7 +26,7 @@ export const en = {
         conferenceAcronym: 'ICMTOGI 2026',
         theme: 'Innovation and Sustainability in Oil & Gas Sector',
         dates: 'April 29-30, 2026',
-        location: 'Baghdad, Iraq',
+        location: 'Iraq',
         welcomeTitle: 'Welcome to ICMTOGI 2026',
         welcomeText: 'Under the patronage of the University President, Prof. Dr. Muhsin Noori Hamzeh, and the direct supervision of the Dean of the College of Chemical Engineering, Prof. Dr. Khalid A. Sukkar, the organizing committee announces the opening of submissions for scientific research papers to participate in the Fourth International Conference on Modern Technologies in Oil and Gas Industries. On this occasion, we kindly invite our esteemed colleagues from all colleges, departments, and research centers to actively participate in the conference with their research and that of their students.',
         registerNow: 'Register Now',
@@ -35,7 +35,6 @@ export const en = {
         quickLinks: 'Quick Links',
         keyDates: 'Key Dates',
         abstractDeadline: 'Paper Submission Deadline',
-        fullPaperDeadline: 'Paper Submission Deadline',
         notificationDate: 'Notification of Acceptance',
         conferenceDate: 'Conference Dates',
         brochureTitle: 'Conference Brochure',
@@ -45,11 +44,11 @@ export const en = {
     // About Page
     about: {
         title: 'About the Conference',
-        description: 'Under the patronage of the University President, Prof. Dr. Muhsin Noori Hamzeh, and the direct supervision of the Dean of the College of Chemical Engineering, Prof. Dr. Khalid A. Sukkar, the organizing committee announces the opening of submissions for scientific research papers to participate in the Fourth International Conference on Modern Technologies in Oil and Gas Industries. On this occasion, we kindly invite our esteemed colleagues from all colleges, departments, and research centers to actively participate in the conference with their research and that of their students.',
+        description: 'Under the patronage of the University President, Prof. Dr. Muhsin Noori Hamzeh, and the direct supervision of the Dean of the College of Chemical Engineering, Prof. Dr. Khalid A. Sukkar, the organizing committee announces the opening of submissions for scientific research papers to participate in the Fourth International Conference on Modern Technologies in Oil and Gas Industries, which aims to highlight the latest scientific and technical developments in the oil and gas sector, with the participation of a select group of researchers, academics, and experts from various countries around the world. On this occasion, we kindly invite all professors and researchers from Iraqi and international universities to actively participate in the conference with your research and the research of your students.',
         objectives: 'Conference Objectives',
         objective1: 'Promote the exchange of knowledge and ideas among researchers and practitioners in oil and gas industries',
         objective2: 'Showcase the latest advancements in modern petroleum technologies',
-        objective3: 'Foster collaboration between academia and industry',
+        objective3: 'Foster collaboration between academia and industrial sectors',
         objective4: 'Provide networking opportunities for young researchers and established professionals',
         topics: 'Conference Topics',
         topic1: 'Catalyst technologies, chemical additives, and alternatives',
@@ -114,7 +113,7 @@ export const en = {
         orgMember4Title: 'Knowledge University',
 
         // Scientific Committee
-        sciMember1: 'Prof. Dr. Talib Khalil Ibrahim',
+        sciMember1: 'Prof. Dr. Talib Mohammed Nayef',
         sciMember1Title: 'Chemical Engineering',
         sciMember2: 'Dr. Dana Mohammed Khader',
         sciMember2Title: 'Petroleum Engineering',
@@ -136,8 +135,8 @@ export const en = {
 
     // Call for Papers Page
     callForPapers: {
-        title: 'Call for Papers',
-        intro: 'Under the patronage of the University President, Prof. Dr. Muhsin Noori Hamzeh, and the direct supervision of the Dean of the College of Chemical Engineering, Prof. Dr. Khalid A. Sukkar, the organizing committee announces the opening of submissions for scientific research papers to participate in the Fourth International Conference on Modern Technologies in Oil and Gas Industries.',
+        title: 'Submission Guidelines',
+        intro: 'Under the patronage of the University President, Prof. Dr. Muhsin Noori Hamzeh, and the direct supervision of the Dean of the College of Chemical Engineering, Prof. Dr. Khalid A. Sukkar, the organizing committee announces the opening of submissions for scientific research papers to participate in the Fourth International Conference on Modern Technologies in Oil and Gas Industries, which aims to highlight the latest scientific and technical developments in the oil and gas sector, with the participation of a select group of researchers, academics, and experts from various countries around the world. On this occasion, we kindly invite all professors and researchers from Iraqi and international universities to actively participate in the conference with your research and the research of your students.',
         topics: 'Topics of Interest',
         guidelines: 'Participation Guidelines',
         guideline1: 'Only original, unpublished research papers are accepted',
@@ -158,7 +157,6 @@ export const en = {
         subtitle: 'Mark your calendar with these important deadlines',
         abstractSubmission: 'Paper Submission Opens',
         abstractDeadline: 'Deadline for paper submission',
-        fullPaperDeadline: 'Deadline for paper submission',
         notification: 'Notification of acceptance',
         cameraReady: 'Camera-Ready Paper Deadline',
         earlyRegistration: 'Early Registration Deadline',
@@ -167,14 +165,13 @@ export const en = {
         conferenceEnd: 'Conference End Date',
         // Dates
         date1: 'To be announced',
-        date2: 'April 1, 2026',
-        date3: 'April 1, 2026',
-        date4: 'April 8, 2026',
+        date2: 'March 20, 2026',
+        date3: 'March 30, 2026',
+        date4: 'To be announced',
         date5: 'To be announced',
         date6: 'To be announced',
-        date7: 'To be announced',
-        date8: 'April 29, 2026',
-        date9: 'April 30, 2026',
+        date7: 'April 29 - 30, 2026',
+        date8: 'April 30, 2026',
     },
 
     // Program Page
@@ -237,6 +234,7 @@ export const en = {
     // Registration Page
     registration: {
         title: 'Registration',
+        formText: 'To register please fill out this form:',
         subtitle: 'Join us at ICMTOGI 2026',
         categories: 'Registration Categories',
         early: 'Early Registration',
@@ -271,7 +269,7 @@ export const en = {
         address: 'Address',
         addressText: 'College of Chemical Engineering\nUniversity of Technology\nAl-Sina\'a Street, Baghdad, Iraq',
         phone: 'Phone',
-        phoneNumber: '+964 (0) 7XX XXX XXXX',
+        phoneNumber: '+9647906450375',
         email: 'Email',
         emailAddress: 'icmtogi@uotechnology.edu.iq',
         form: {
@@ -302,6 +300,17 @@ export const en = {
         followUs: 'Follow Us',
         copyright: '© 2026 ICMTOGI - The Fourth International Conference on Modern Technologies in Oil and Gas Industries. All rights reserved.',
         organizedBy: 'Organized by the College of Chemical Engineering, University of Technology - Iraq',
-        designedBy: 'Website designed by University of Technology - Information Technology Center',
+        designedBy: 'Designed by',
+        programmingTeam: 'Programming team',
+        ofItc: 'of Information Technology Center / UOT',
+    },
+
+    // Team Page
+    team: {
+        title: 'Programming Team',
+        subtitle: 'Meet the developer behind the conference website',
+        centerName: 'Information Technology Center',
+        member1Name: 'Abubakr Saeb Issa',
+        member1Title: 'Web Developer',
     },
 };

@@ -81,7 +81,13 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/20 mt-8 pt-8 text-center">
                     <p className="text-white/70 text-sm mb-2">{t.footer.organizedBy}</p>
-                    <p className="text-white/60 text-xs mb-2">{t.footer.designedBy}</p>
+                    <p className="text-white/60 text-xs mb-2 flex items-center justify-center gap-1">
+                        {t.footer.designedBy}{' '}
+                        <Link to="/team" className="hover:text-white hover:underline transition-colors font-semibold">
+                            {t.footer.programmingTeam}
+                        </Link>{' '}
+                        {t.footer.ofItc}
+                    </p>
                     <p className="text-white/50 text-xs">{t.footer.copyright}</p>
                 </div>
             </div>

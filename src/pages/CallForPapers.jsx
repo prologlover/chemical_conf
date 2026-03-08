@@ -112,7 +112,9 @@ const CallForPapers = () => {
                                 <h3 className="text-xl font-semibold mb-4">{t.callForPapers.submissionPortal}</h3>
                                 <p className="text-white/80 text-sm mb-6">{t.callForPapers.submissionInfo}</p>
                                 <a
-                                    href="mailto:icmtogi@uotechnology.edu.iq"
+                                    href="https://icmtogd2026.edas.info/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-700 font-medium rounded-lg hover:bg-gray-100 transition-colors"
                                 >
                                     {t.callForPapers.submitOnline}

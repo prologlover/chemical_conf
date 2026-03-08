@@ -11,15 +11,17 @@ const Home = () => {
 
     const keyDates = [
         { label: t.home.abstractDeadline, date: t.importantDates.date2 },
-        { label: t.home.fullPaperDeadline, date: t.importantDates.date3 },
-        { label: t.home.notificationDate, date: t.importantDates.date4 },
-        { label: t.home.conferenceDate, date: t.importantDates.date8 },
+        { label: t.home.notificationDate, date: t.importantDates.date3 },
+        { label: t.home.conferenceDate, date: t.importantDates.date7 },
     ];
 
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-primary-700 via-primary-800 to-primary-900 text-white overflow-hidden min-h-screen flex items-center">
+            <section
+                className="relative bg-cover bg-center bg-no-repeat text-white overflow-hidden min-h-screen flex items-center"
+                style={{ backgroundImage: "url('/HEROBG.jpeg')" }}
+            >
                 {/* Enhanced Background Pattern */}
                 <div className="absolute inset-0">
                     {/* Gradient Overlay */}
@@ -38,47 +40,71 @@ const Home = () => {
                 </div>
 
                 <div className="container-custom py-12 md:py-16 relative w-full">
-                    <div className="text-center max-w-4xl mx-auto">
-                        <p className="text-accent-300 font-medium text-base md:text-lg mb-1">{t.home.university}</p>
-                        <p className="text-white/80 text-base md:text-lg mb-4">{t.home.department}</p>
-
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
-                            {t.home.conferenceTitle}
-                        </h1>
-
-                        <div className="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
-                            <span className="text-2xl md:text-3xl font-bold text-accent-300">{t.home.conferenceAcronym}</span>
-                        </div>
-
-                        <p className="text-xl md:text-2xl text-white/90 mb-6 font-light">
-                            {t.home.theme}
-                        </p>
-
-                        <div className="flex flex-wrap justify-center gap-4 mb-6">
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                <span className="text-base md:text-lg">{t.home.dates}</span>
-                            </div>
-                            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                <span className="text-base md:text-lg">{t.home.location}</span>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Link to="/registration" className="btn-primary bg-white text-primary-700 hover:bg-gray-100">
-                                {t.home.registerNow}
-                            </Link>
-                            <Link to="/call-for-papers" className="btn-secondary border-white text-white hover:bg-white hover:text-primary-700">
-                                {t.home.submitPaper}
-                            </Link>
-                        </div>
+                    {/* Mobile Logos */}
+                    <div className="flex justify-center gap-6 mb-8 lg:hidden px-4">
+                        <img src="/logo.jpg" alt="Department Logo" className="w-24 md:w-32 h-auto object-contain rounded-lg bg-white p-2 shadow-lg" />
+                        <img src="/uni_logo.png" alt="University Logo" className="w-24 md:w-32 h-auto object-contain rounded-lg bg-white p-2 shadow-lg" />
                     </div>
+
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 w-full">
+                        {/* Left Logo (Desktop) */}
+                        <div className="hidden lg:block w-36 xl:w-48 shrink-0">
+                            <img src="/logo.jpg" alt="Department Logo" className="w-full h-auto object-contain rounded-xl bg-white p-3 shadow-xl" />
+                        </div>
+
+                        {/* Center Content */}
+                        <div className="text-center max-w-4xl flex-1 mx-auto">
+                            <p className="text-accent-300 font-medium text-xl md:text-2xl lg:text-3xl mb-2">{t.home.university}</p>
+                            <p className="text-white/90 text-xl md:text-2xl lg:text-3xl mb-6">{t.home.department}</p>
+
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                {t.home.conferenceTitle}
+                            </h1>
+
+                            <div className="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                                <span className="text-2xl md:text-3xl font-bold text-accent-300">{t.home.conferenceAcronym}</span>
+                            </div>
+
+                            <p className="text-2xl md:text-3xl lg:text-4xl text-white/95 mb-8 font-medium">
+                                {t.home.theme}
+                            </p>
+
+                            <div className="flex flex-wrap justify-center gap-4 mb-6">
+                                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span className="text-base md:text-lg">{t.home.dates}</span>
+                                </div>
+                                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span className="text-base md:text-lg">{t.home.location}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap justify-center gap-4">
+                                <Link to="/registration" className="btn-primary bg-white text-primary-700 hover:bg-gray-100">
+                                    {t.home.registerNow}
+                                </Link>
+                                <a
+                                    href="https://icmtogd2026.edas.info/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-secondary border-white text-white hover:bg-white hover:text-primary-700"
+                                >
+                                    {t.home.submitPaper}
+                                </a>
+                            </div>
+                        </div> {/* End Center Content */}
+
+                        {/* Right Logo (Desktop) */}
+                        <div className="hidden lg:block w-36 xl:w-48 shrink-0">
+                            <img src="/uni_logo.png" alt="University Logo" className="w-full h-auto object-contain rounded-xl bg-white p-3 shadow-xl" />
+                        </div>
+                    </div> {/* End Flex Layout */}
                 </div>
             </section>
 
@@ -144,7 +170,7 @@ const Home = () => {
             <section className="section-padding bg-gray-50">
                 <div className="container-custom">
                     <h2 className="heading-secondary text-center mb-12">{t.home.keyDates}</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {keyDates.map((item, index) => (
                             <div key={index} className="card-hover text-center">
                                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -175,6 +201,17 @@ const Home = () => {
                         <div className="text-center group">
                             <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
                                 <img
+                                    src="/partners/mustaqbal.png"
+                                    alt={t.partners.mustaqbal}
+                                    className="max-w-full max-h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-800">{t.partners.mustaqbal}</h3>
+                        </div>
+
+                        <div className="text-center group">
+                            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
+                                <img
                                     src="/partners/alqalam.jpg"
                                     alt={t.partners.alqalam}
                                     className="max-w-full max-h-full object-contain"
@@ -192,17 +229,6 @@ const Home = () => {
                                 />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-800">{t.partners.knowledge}</h3>
-                        </div>
-
-                        <div className="text-center group">
-                            <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-4 flex items-center justify-center p-4 transition-transform duration-300 group-hover:scale-105">
-                                <img
-                                    src="/partners/mustaqbal.jpg"
-                                    alt={t.partners.mustaqbal}
-                                    className="max-w-full max-h-full object-contain"
-                                />
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-800">{t.partners.mustaqbal}</h3>
                         </div>
                     </div>
                 </div>
